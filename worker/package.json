@@ -1,0 +1,13 @@
+{
+  "name": "pixelspec-worker",
+  "version": "1.0.0",
+  "description": "Optional serverless headless browser inspection worker for PixelSpec",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "keywords": ["browser-inspection", "headless-chromium", "pixelspec"],
+  "author": "PixelSpec",
+  "license": "MIT"
+}
