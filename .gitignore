@@ -1,0 +1,90 @@
+# ==============================================================================
+# PixelSpec Production .gitignore
+# Stack: React + TypeScript + Vite (Frontend) & Node.js + Express + Playwright (Backend)
+# ==============================================================================
+
+# Dependencies
+node_modules/
+**/node_modules/
+.pnp
+.pnp.js
+
+# Environment Secrets & Credentials
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.cert
+*.crt
+# Explicitly preserve non-sensitive environment templates
+!.env.example
+!.env.sample
+
+# Build Outputs
+dist/
+dist-ssr/
+build/
+out/
+coverage/
+*.tsbuildinfo
+
+# Vite & Development Caches
+.vite/
+.cache/
+.tmp/
+tmp/
+.eslintcache
+
+# Logs & Debugging
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+debug.log
+
+# Testing & Browser Automation (Playwright / Vitest Artifacts)
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+# Preserve intentional test fixtures and reference assets
+!server/fixtures/**
+!**/fixtures/**
+
+# Operating System & IDE
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.sublime-workspace
+*.sublime-project
+
+# Local Databases, Uploads & Temporary Inspection Dumps
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+uploads/
+temp_downloads/
+.temp/
+
+# Deployment & Hosting Platforms (generated directories only; configuration tracked)
+.vercel/
+.netlify/
+.serverless/
