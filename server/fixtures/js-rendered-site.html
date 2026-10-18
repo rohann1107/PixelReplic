@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic App</title>
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #00FF66;
+      font-family: monospace;
+      padding: 40px;
+    }
+    .hydrated-heading {
+      font-size: 36px;
+      color: #00FF66;
+    }
+    .action-button {
+      background-color: #00FF66;
+      color: #000000;
+      padding: 10px 20px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="loading-state">Loading client bundle...</div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      const root = document.getElementById('root');
+      root.innerHTML = `
+        <header>
+          <div class="hydrated-heading">CyberTerminal Console v2</div>
+        </header>
+        <main>
+          <p>Real-time metrics rendered via client-side DOM mutation.</p>
+          <button class="action-button" id="execute-btn">EXECUTE SCRIPT</button>
+        </main>
+      `;
+      document.title = "CyberTerminal — Client Hydrated";
+    }, 150);
+  </script>
+</body>
+</html>
